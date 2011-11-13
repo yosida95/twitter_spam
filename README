@@ -8,8 +8,8 @@
  4. $ python ./reaju_bomb/manage.py syncdb
 
  5. このリポジトリーのrootディレクトリを./reaju_bombに移動します。
- 6. https://dev.twitter.com/でDeveloper登録をします。
- 7. https://dev.twitter.com/apps/newでアプリケーションを新規登録して、ConsumerKeyとConsumerSecretを取得します。
+ 6. https://dev.twitter.com/ でDeveloper登録をします。
+ 7. https://dev.twitter.com/apps/new でアプリケーションを新規登録して、ConsumerKeyとConsumerSecretを取得します。
  8. 7で獲得したConsumerKeyとConsumerSecretを、./reaju_bomb/root/consumer.pyにハードコーディングします。
 
  9. ./reaju_bomb/urls.pyを、このリポジトリーに含まれるurls.py に置換します。
