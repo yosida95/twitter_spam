@@ -1,0 +1,19 @@
+設置方法
+
+ 1. サーバーにDjangoをインストールします。
+
+ 2. $ django-admin startproject reaju_bomb
+ 3. $ ./reaju_bomb/settings.pyの内容を適宜設定し、INSTALLED_APPSにreaju_bomb.rootを追加します。
+    Sessionを使うので、Session周りの設定に留意してください。
+ 4. $ python ./reaju_bomb/manage.py syncdb
+
+ 5. このリポジトリーのrootディレクトリを./reaju_bombに移動します。
+ 6. https://dev.twitter.com/でDeveloper登録をします。
+ 7. https://dev.twitter.com/apps/newでアプリケーションを新規登録して、ConsumerKeyとConsumerSecretを取得します。
+ 8. 7で獲得したConsumerKeyとConsumerSecretを、./reaju_bomb/root/consumer.pyにハードコーディングします。
+
+ 9. ./reaju_bomb/urls.pyを、このリポジトリーに含まれるurls.py に置換します。
+10. $ python ./reaju_bomb/manage.py runserver localhost:9000 などとして、爆発させられるかテストします。
+11. 公開します。
+
+./reaju_bomb/root/views.pyのpost関数を適当に書き換えると、違う相手を爆発させたり、ひとりで楽しんだりできます。

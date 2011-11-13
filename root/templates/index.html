@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="copyright" content="Copyright (C) yosida95 All Rights Reserved." />
+<meta name="Author" content="yosida95" />
+<meta name="robots" content="ALL" />
+<title>@red_kanchi 爆発しろ！！！</title>
+</head>
+<body>
+<h1>@red_kanchi 爆発しろ！！！</h1>
+<h2>What's this</h2>
+<p>11/13 3:27 - 5:51に放送されていた<a href="http://ustream.tv/channel/yosida95-onair">yosida95@OnAir</a>で行われていたコーディング生放送によって製作された、真のリア充<a href="http://twitter.com/red_kanchi">@red_kanchi</a>を爆発させるためのなにか。</p>
+
+<h2>How to use</h2>
+<ol>
+<li><a href="/signin">サインイン</a>します。</li>
+<li>サインアップ後現れる爆発ボタンをクリックします。</li>
+<li>お好みによって、爆発後現れる再爆発ボタンを連打します。</li>
+</ol>
+
+{% if is_signedup %}
+<h2>Mission</h2>
+<form method="POST" action="/post">
+<input type="submit" value="@red_kanchi 爆発せよ！！" />
+</form>
+{% else %}
+<h2>Signup</h2>
+<p><a href="/signin">TwitterIDでサインアップ</a></p>
+{% endif %}
+<p>このサービスによって、@red_kanchi は{{ click_count }}回爆発しました。</p>
+
+<h2>Spec</h2>
+<ul>
+<li>Python + Djangoで作られています</li>
+<li>Twitterの認証, 投稿では、Tweepyを使用しています</li>
+<li>1/100秒単位での連続爆発に対応しています</li>
+</ul>
+
+<h2>How to withdrawal</h2>
+<p><a href="/signout">サインアウト</a>していただくことで、サーバーが一時的に保持している認証情報を破棄します。<br />
+また、<a href="https://twitter.com/settings/applications">Twitterの設定ページ</a>より、「直ちに爆発せよ」への許可を取り消すことで、使用停止作業が確実に完了します。</p>
+</body>
+</html>
